@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-MODELPATH = '' # 모델 절대 경로 입력
+MODELPATH = '' # .pt 확장자 모델 절대 경로 입력
 model = YOLO(MODELPATH)
 
 model.export(
