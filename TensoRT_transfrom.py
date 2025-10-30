@@ -1,6 +1,7 @@
 from ultralytics import YOLO
 
-model = YOLO('Crack4.pt')
+MODELPATH = '' # 모델 절대 경로 입력
+model = YOLO(MODELPATH)
 
 model.export(
     format='engine',
