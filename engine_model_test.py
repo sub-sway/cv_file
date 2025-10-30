@@ -2,13 +2,13 @@ import cv2
 from ultralytics import YOLO
 
 # --- 설정 ---
-ENGINE_MODEL_PATH = 'fire_s.engine'
+ENGINE_MODEL_PATH = '' # 모델 경로 업로드 (.engine 파일 업로드)
 
 def main():
     # 1. YOLO TensorRT 엔진 모델 로드
     print(f"'{ENGINE_MODEL_PATH}' 모델을 로드합니다.")
     try:
-        model = YOLO(ENGINE_MODEL_PATH, task='detect')
+        model = YOLO(ENGINE_MODEL_PATH, task='detect') # task는 detect로 고정!
     except Exception as e:
         print(f"모델 로드 중 오류 발생: {e}")
         return
